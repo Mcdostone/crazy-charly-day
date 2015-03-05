@@ -15,6 +15,8 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
+    @pieces = Piece.all
+    @types = Type.all
   end
 
   # GET /items/1/edit
