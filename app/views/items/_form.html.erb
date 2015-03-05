@@ -1,46 +1,50 @@
-<%= form_for(@item) do |f| %>
-  <% if @item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+<section class="col-md-offset-4 col-md-4">
+    <h1>New Item</h1>
+    <%= form_for(@item) do |f| %>
+      <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-      <ul>
-      <% @item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @item.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :nom %><br>
-    <%= f.text_field :nom %>
-  </div>
-  <div class="field">
-    <%= f.label :prix %><br>
-    <%= f.text_field :prix %>
-  </div>
-  <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.file_field :photo %>
-    <%= f.hidden_field :photo_cache %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :couleur %><br>
-    <%= f.text_field :couleur %>
-  </div>
-  <div class="field">
-    <%= f.label :piece_id %><br />
-    <%= f.select :piece_id, options_from_collection_for_select(@pieces, 'id', 'nom') %>
-  </div>
-    <div class="field">
-    <%= f.label :type_id %><br />
-    <%= f.select :type_id, options_from_collection_for_select(@types, 'id', 'materiau') %>
-</div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div class="field form-group">
+        <%= f.label :nom %><br>
+        <%= f.text_field :nom, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :prix %><br>
+        <%= f.text_field :prix, :class => 'form-control' %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :photo %><br>
+        <%= f.file_field :photo  %>
+        <%= f.hidden_field :photo_cache %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, :class => 'form-control'  %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :couleur %><br>
+        <%= f.text_field :couleur, :class => 'form-control'  %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :piece_id %><br />
+        <%= f.select :piece_id, options_from_collection_for_select(@pieces, 'id', 'nom') %>
+      </div>
+        <div class="field form-group">
+        <%= f.label :type_id %><br />
+        <%= f.select :type_id, options_from_collection_for_select(@types, 'id', 'materiau') %>
+    </div>
+      <div class="actions">
+        <%= f.submit %>
+        <%= link_to 'Back', items_path %>
+      </div>
+    <% end %>
+</section>

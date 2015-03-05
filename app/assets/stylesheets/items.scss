@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "compass/css3/box-shadow";
+
 .list-item {
   background-color: #f1c40f;
   tbody {
@@ -15,7 +17,6 @@
 
   button {
     color: black;
-    
     a{
     	display: inline-block;
     	height:100%;
@@ -27,10 +28,20 @@
 section{
 	
 	.thumbnail{
-		height:300px;
+		height:210px;
 		margin-right:20px;
-		img{
-			height:110px;
+		a {
+			img{
+				height:50%;
+			}
 		}
+
+		.tags{
+			position : relative;
+			bottom : 0;
+			
+		}
+  &:hover {@include box-shadow(rgba(125,125,125,0.7) 0.5px 0.5px 1px);}
+
 	}
 }
