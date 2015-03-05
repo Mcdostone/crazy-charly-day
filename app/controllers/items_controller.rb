@@ -69,7 +69,7 @@ class ItemsController < ApplicationController
 
   # GET /items/type/id
   def filter_by_type
-    @items = Item.where ['id = ?', params[:id]]
+    @items = Item.where ['type_id = ?', params[:id]]
     render 'items/index'
   end
 
@@ -87,6 +87,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur, :piece_id)
+      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur, :piece_id, :type_id)
     end
 end
