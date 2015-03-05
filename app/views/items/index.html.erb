@@ -33,4 +33,5 @@
 </section>
 <br>
 
-<button type="button" class="btn btn-default"><%= link_to 'New Item', new_item_path %></button>
+
+<%= button_to "New Item", new_item_path, :method => "get", :class => 'btn btn-default' %>
