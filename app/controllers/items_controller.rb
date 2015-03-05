@@ -81,6 +81,10 @@ class ItemsController < ApplicationController
     render 'items/index'
   end
 
+  def best
+    @items = Item.order('likes DESC').take 5
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
