@@ -15,11 +15,11 @@
     <div class="collapse">
         <div class="well ">
             <%= label_tag :piece %><br/>
-            <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece'
+            <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece', :include_blank => '--'
             %><br/>
 
             <%= label_tag :type %><br/>
-            <%= select_tag :type, options_from_collection_for_select(@types, 'id', 'materiau'), :class => 'from_type' %>
+            <%= select_tag :type, options_from_collection_for_select(@types, 'id', 'materiau'), :class => 'from_type', :include_blank => '--' %>
         </div>
     </div>
     <br/>
