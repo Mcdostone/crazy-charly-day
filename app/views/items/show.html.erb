@@ -27,12 +27,17 @@
 
 <p>
   <strong>Piece:</strong>
-  <%= Piece.find(@item.piece_id).nom %>
+  <%= @item.piece.nom %>
 </p>
 
 <p>
   <strong>Type:</strong>
-  <%= Type.find(@item.type_id).materiau %>
+  <%= @item.type.materiau %>
+</p>
+
+<p>
+  <strong>Likes:</strong>
+  <%= @item.likes %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

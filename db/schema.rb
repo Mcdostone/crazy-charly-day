@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150305153839) do
     t.datetime "updated_at",  null: false
     t.integer  "piece_id"
     t.integer  "type_id"
-    t.integer  "likes"
+    t.integer  "likes",       default: 0
   end
 
   add_index "items", ["piece_id"], name: "index_items_on_piece_id"
