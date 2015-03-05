@@ -2,10 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1{
-	
-}	
+.list-item {
+  background-color: #f1c40f;
+  tbody {
+    div {
+      margin-bottom: 20px;
+      background-color: rgba(255, 203, 16, 0.71);
 
-table{
-  border : solid red;
+    }
+  }
+  button {
+    color: black;
+  }
 }
