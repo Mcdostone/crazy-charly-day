@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   
+  resources :sessions
+  get 'login' => 'sessions#new', :as => 'login'
+  get 'logout' => 'sessions#destroy', :as => 'logout' 
+
+
+  get "signup" => "users#new", :as => "sign_up"
+  resources :users
+
+
   get 'items/couleur/:color' => 'items#filter_by_color'
   get 'items/type/:id' => 'items#filter_by_type'
   get 'items/piece/:id' => 'items#filter_by_piece'

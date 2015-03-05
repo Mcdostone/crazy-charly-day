@@ -1,4 +1,4 @@
-<section class="col-md-12">
+
  <% @items.each do |item| %>
 
   <div class="col-sm-6 col-md-3">
@@ -6,7 +6,7 @@
       <%= image_tag item.photo %>
       <div class="caption">
         <h3><%= item.nom %></h3>
-        <p><%= item.description %></p>
+        <p class="description"><%= item.description %></p>
         <span class="prix"><%= item.prix %> <i class="fa fa-eur"></i></span>
         <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
         <p class="tags"><%= item.couleur %> , <%= item.type.materiau %> , <%= item.piece.nom %></p>
@@ -14,4 +14,3 @@
     </div>
   </div>
   <% end %>
-</section>
