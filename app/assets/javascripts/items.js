@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
     });*/
     $(".from_piece").change(function() {
         var type = $('.from_type option:selected').val();
-        alert(type);
         var data = {
             piece_id: $(this).val()
         };
@@ -29,7 +28,6 @@ jQuery(document).ready(function($) {
 
     $('.from_type').change(function() {
         var piece = $('.from_piece option:selected').val();
-        alert(piece);
         var data = {
             type_id: $(this).val()
         };
