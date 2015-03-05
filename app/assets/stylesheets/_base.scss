@@ -6,8 +6,6 @@ body{
 	
 	.container{
 	background-color: $light-color;
-	box-shadow: 0.5em 0.5em  2em black;
-  	border : solid;
 }
 
 
@@ -17,20 +15,20 @@ body{
 	  	}
 	}
 
-	a{
-		text-decoration:none;
-		color : $light-color;
-		
-		&:hover{
-			background-color:none;
-			font-size:1.1em;
-		}	
-	}
 
 
 	nav {
 		background-color: $dark-color;
 		color : $light-color;
+		a{
+			text-decoration:none;
+			color : $light-color;
+			
+			&:hover{
+				background-color:none;
+				font-size:1.2em;
+			}	
+		}
 			.root{
 				background : url('assets/images/logo.png') center center;
 				background-size:100% 100%;

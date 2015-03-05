@@ -15,23 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-    
-var ajx = (function () {
-    return {
-        modules: {}
-    }
-})();
-
-ajx.modules.items = (function () {
-    return {
-        init: function () {
-            false;
-        },
-        ajax: function () {
-            return false;
-        }
-    }
-})();
-
 
 

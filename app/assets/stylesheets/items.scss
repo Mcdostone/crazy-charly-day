@@ -11,7 +11,34 @@
 
     }
   }
+
+
   button {
     color: black;
+    
+    a{
+    	display: inline-block;
+    	height:100%;
+    	width:100%;
+    }
   }
+}
+
+section{
+	
+	.thumbnail{
+		height:300px;
+		margin-right:20px;
+		img{
+			height:30%;
+		}
+
+		.description{
+			height:60%;
+			
+		}
+
+
+
+	}
 }
