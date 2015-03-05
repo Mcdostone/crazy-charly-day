@@ -12,7 +12,9 @@
         <%= password_field_tag :password %>
     </div>
 
-    <%= button_to "Log in", '/items', :method => "get", :class => 'btn btn-default' %>
-
+    <div class="actions">
+        <%= submit_tag "Log in" %>
+    </div>
+    
     <% end %>
 </section>
