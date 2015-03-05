@@ -5,9 +5,10 @@
   <div class="col-md-8">
      <div class="row banner_img">
         <%= image_tag @item.photo , :class=>"img-responsive center-block " %>  
-      </div> 
-      <i class="fa-heart fa"></i> <%= @item.likes %>
-      <button class="btn btn-sm"><i class="fa fa-plus"></i> j'aime</button>          
+      </div>
+      <input type="hidden" value="<%= @item.id %>" id="item_id" />
+      <i class="fa-heart fa"></i> <span id="likes_count"><%= @item.likes %></span>
+      <button class="btn btn-sm" id="like_item"><i class="fa fa-plus"></i> j'aime</button>          
   </div>
   <div class="col-md-4">
     <h2><%= @item.nom %></h2>

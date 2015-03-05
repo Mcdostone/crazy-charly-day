@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :like]
 
 
   # GET /items
@@ -93,6 +93,14 @@ class ItemsController < ApplicationController
 
   def best
     @items = Item.order('likes DESC').take 5
+  end
+
+  def like
+    @item.increment!(:likes)
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   private

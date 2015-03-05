@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'items/from_color' => 'items#from_color'
   get 'items/from_type' => 'items#from_type'
   get 'items/from_piece' => 'items#from_piece'
-
+  get 'items/like' => 'items#like'
 
   get 'login' => 'sessions#new', :as => 'login'
   get 'logout' => 'sessions#destroy', :as => 'logout' 

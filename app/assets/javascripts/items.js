@@ -47,4 +47,21 @@ jQuery(document).ready(function($) {
             }
         });
     });
+
+    $('#like_item').click(function() {
+        var item_id = $('#item_id').val();
+        $.ajax({
+            url: '/items/like',
+            dataType: 'text',
+            data: {
+                id: parseInt(item_id)
+            },
+            success : function(result) {
+                eval(result);
+            },
+            error : function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError);
+            }
+        });
+    });
 });
