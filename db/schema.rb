@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20150305153839) do
     t.string   "photo"
     t.text     "description"
     t.string   "couleur"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "piece_id"
     t.integer  "type_id"
     t.integer  "likes",       default: 0
