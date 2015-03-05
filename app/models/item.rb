@@ -3,6 +3,7 @@ class Item < ActiveRecord::Base
 	belongs_to :type
 
 	has_many :commentaires
+
 	
 	# To upload images
 	mount_uploader :photo, PhotoUploader

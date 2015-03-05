@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+
+  
+  resources :sessions
+
+  root :to => "application#home"
+
   get 'items/from_color' => 'items#from_color'
   get 'items/from_type' => 'items#from_type'
   get 'items/from_piece' => 'items#from_piece'
+
 
   get 'login' => 'sessions#new', :as => 'login'
   get 'logout' => 'sessions#destroy', :as => 'logout' 
@@ -9,10 +16,14 @@ Rails.application.routes.draw do
   get "signup" => "users#new", :as => "sign_up"
 
   resources :users
+
   resources :types
   resources :pieces
-  resources :items
-  resources :sessions
+
+  resources :items do
+    resources :commentaires, :only => [:create]
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

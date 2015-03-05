@@ -2,15 +2,18 @@
 
 
 <!-- items_from_piece_path(:id => 4), :remote => true -->
-<div class="field row">
+<div class="row filter">
+<div class="col-md-12">
+  
     <h1>Listing Items</h1>
     <a class="btn btn-default" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
        aria-controls="collapseExample">
         <i class="fa fa-filter fa-lg"></i> Filter
     </a>
+</div>
 
-    <div class="collapse" id="collapseExample">
-        <div class="well col-md-4 ">
+    <div class="collapse">
+        <div class="well ">
             <%= label_tag :piece %><br/>
             <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece', :include_blank => '--'
             %><br/>
@@ -30,4 +33,5 @@
 </section>
 <br>
 
-<button type="button" class="btn btn-default"><%= link_to 'New Item', new_item_path %></button>
+
+<%= button_to "New Item", new_item_path, :method => "get", :class => 'btn btn-default' %>
