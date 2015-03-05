@@ -9,8 +9,8 @@
         <i class="fa fa-filter fa-lg"></i> Filter
     </a>
 
-    <div class="collapse" id="collapseExample">
-        <div class="well col-md-4 ">
+    <div class="collapse">
+        <div class="well ">
             <%= label_tag :piece %><br/>
             <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece'
             %><br/>
