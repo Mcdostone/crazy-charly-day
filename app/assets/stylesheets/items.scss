@@ -11,6 +11,8 @@
 
     }
   }
+
+
   button {
     color: black;
     
@@ -20,4 +22,15 @@
     	width:100%;
     }
   }
+}
+
+section{
+	
+	.thumbnail{
+		height:300px;
+		margin-right:20px;
+		img{
+			height:110px;
+		}
+	}
 }
