@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   
   get 'items/couleur/:color' => 'items#filter_by_color'
+  get 'items/type/:id' => 'items#filter_by_type'
 
   resources :types
-
   resources :pieces
-
   resources :items
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

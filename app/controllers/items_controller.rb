@@ -67,6 +67,12 @@ class ItemsController < ApplicationController
     render 'items/index'
   end
 
+  # GET /items/type/id
+  def filter_by_type
+    @items = Item.where ['id = ?', params[:id]]
+    render 'items/index'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
