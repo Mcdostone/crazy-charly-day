@@ -19,4 +19,14 @@ class Item < ActiveRecord::Base
 	validates :prix, presence: true
 
 	validates_numericality_of :prix, :greater_than => 0, :message => "Le prix ne peut pas être négatif"
+	validates_numericality_of :likes, :greater_than_or_equal_to => 0
+
+
+
+	before_save :set_defaults
+
+	private
+	def set_defaults
+		self.likes = 0
+	end
 end
