@@ -1,4 +1,6 @@
 class Item < ActiveRecord::Base
+	# To upload images
+	mount_uploader :photo, PhotoUploader
 
 	# Rules to create a valid Item
 	validates :nom, presence: true
@@ -12,5 +14,4 @@ class Item < ActiveRecord::Base
 	validates :prix, presence: true
 
 	validates_numericality_of :prix, :greater_than => 0, :message => "Le prix ne peut pas être négatif"
-
 end
