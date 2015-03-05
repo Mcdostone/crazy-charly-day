@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   resources :sessions
 
+  root :to => "application#home"
+
   get 'items/from_color' => 'items#from_color'
   get 'items/from_type' => 'items#from_type'
   get 'items/from_piece' => 'items#from_piece'

@@ -1,17 +1,23 @@
 jQuery(document).ready(function ($) {
     //Tell Rails that we’re sending a JavaScript request
-    /*$.ajaxSetup({ 
-     'beforeSend': function (xhr){
-     xhr.setRequestHeader("Accept", "text/javascript")}
-     });*/
-    $(".from_piece").change(function () {
+    /*$.ajaxSetup({
+        'beforeSend': function (xhr){
+        xhr.setRequestHeader("Accept", "text/javascript")}  
+    });*/
+    $(".from_piece").change(function() {
+        var type = $('.from_type option:selected').val();
+        var data = {
+            piece_id: $(this).val()
+        };
+
+        if(type !== '')
+            data.type_id = type;
+
         $.ajax({
             url: '/items/from_piece',
             dataType: 'text',
-            data: {
-                id: $(this).val()
-            },
-            success: function (result) {
+            data: data,
+            success : function(result) {
                 eval(result);
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -20,14 +26,20 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $('.from_type').change(function () {
+    $('.from_type').change(function() {
+        var piece = $('.from_piece option:selected').val();
+        var data = {
+            type_id: $(this).val()
+        };
+
+        if(piece !== '')
+            data.piece_id = piece;
+
         $.ajax({
             url: '/items/from_type',
             dataType: 'text',
-            data: {
-                id: $(this).val()
-            },
-            success: function (result) {
+            data: data,
+            success : function(result) {
                 eval(result);
             },
             error: function (xhr, ajaxOptions, thrownError) {

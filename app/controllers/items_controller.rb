@@ -68,23 +68,26 @@ class ItemsController < ApplicationController
 
   # GET /items/couleur/rouge
   def from_color
-    @items = Item.where ['couleur = ?', params[:color]]
-    render 'items/index'
+    @items = Item.where filter_params
+    respond_to do |format|
+      format.js { render 'items/filter' }
+    end
   end
 
   # GET /items/type/id
   def from_type
-    @selected = Item.where ['type_id = ?', params[:id]]
+    #['type_id = ?', params[:type_id]]
+    @selected = Item.where filter_params
     respond_to do |format|
-      format.js
+      format.js { render 'items/filter' }
     end
   end
 
   # GET /items/piece/id
   def from_piece
-    @selected = Item.where ['piece_id = ?', params[:id]]
+    @selected = Item.where filter_params
     respond_to do |format|
-      format.js
+      format.js { render 'items/filter' }
     end
   end
 
@@ -96,6 +99,10 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
+    end
+
+    def filter_params
+      params.permit(:couleur, :type_id, :piece_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
