@@ -24,8 +24,7 @@
  <% @item.commentaires.each do |comm| %> 
  <blockquote>
  <p>
-  <strong>Contenu:</strong>
-  <%= comm.contenu %>
+  <b><%= comm.contenu %></b> 
   </p>
   <footer>Commentaire de <cite title="Source Title"><%= comm.email %></cite></footer>
 </blockquote> 
