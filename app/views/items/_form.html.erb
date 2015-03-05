@@ -30,8 +30,12 @@
   </div>
   <div class="field">
     <%= f.label :couleur %><br>
-      <%= f.text_field :couleur %>
+    <%= f.text_field :couleur %>
   </div>
+  <div class="field">
+    <%= f.label :piece_id %><br />
+    <%= f.select :piece_id, options_for_select(Piece.all.map{|p|[p.nom, p.id]}) %>
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>

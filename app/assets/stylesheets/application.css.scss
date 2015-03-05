@@ -18,7 +18,8 @@
 @import "susyone";
 
 .container{
-  @include container;
+	@include container(14);
+	@include susy-grid-background; 
   border : solid;
 }
 

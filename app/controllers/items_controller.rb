@@ -63,13 +63,19 @@ class ItemsController < ApplicationController
 
   # GET /items/couleur/rouge
   def filter_by_color
-    @items = Item.where(["couleur = ?", params[:color]])
+    @items = Item.where ['couleur = ?', params[:color]]
     render 'items/index'
   end
 
   # GET /items/type/id
   def filter_by_type
     @items = Item.where ['id = ?', params[:id]]
+    render 'items/index'
+  end
+
+  # GET /items/piece/id
+  def filter_by_piece
+    @items = Item.where ['piece_id = ?', params[:id]]
     render 'items/index'
   end
 
@@ -81,6 +87,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur)
+      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur, :piece_id)
     end
 end
