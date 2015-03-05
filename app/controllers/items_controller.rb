@@ -67,6 +67,12 @@ class ItemsController < ApplicationController
     render 'items/index'
   end
 
+  # GET /items/piece/cave
+  def filter_by_place
+    @items = Item.where(["piece_id = ?", params[:id]])
+    render 'items/index'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
@@ -75,6 +81,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur)
+      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur, :piece_id)
     end
 end

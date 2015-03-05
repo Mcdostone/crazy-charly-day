@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   get 'items/couleur/:color' => 'items#filter_by_color'
+  get 'items/piece/:id' => 'items#filter_by_place'
 
   resources :types
 
