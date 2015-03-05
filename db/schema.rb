@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305111807) do
+ActiveRecord::Schema.define(version: 20150305145157) do
 
   create_table "items", force: :cascade do |t|
     t.string   "nom"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150305111807) do
     t.string   "couleur"
     t.integer  "piece_id"
     t.integer  "type_id"
+    t.integer  "likes"
   end
 
   add_index "items", ["piece_id"], name: "index_items_on_piece_id"

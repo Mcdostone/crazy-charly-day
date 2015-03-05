@@ -1,12 +1,22 @@
 @import "variables";
-@import "susyone";
 
 body{
 	background-color: $b-color;
 	margin:0;
-  // @include susy-grid-background; 
 	
-	
+	.container{
+	background-color: $light-color;
+	box-shadow: 0.5em 0.5em  2em black;
+  	border : solid;
+}
+
+
+	footer{
+	  	p{
+	   	 text-align: center;
+	  	}
+	}
+
 	a{
 		text-decoration:none;
 		color : $light-color;

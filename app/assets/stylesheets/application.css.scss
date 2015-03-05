@@ -14,18 +14,8 @@
  *= require_self
  *= require font-awesome
  */
-@import "compass";
-@import "susyone";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-.container{
-	@include container(14);
-	@include susy-grid-background; 
-  border : solid;
-}
 
-footer{
-  p{
-    text-align: center;
-  }
-}
 
