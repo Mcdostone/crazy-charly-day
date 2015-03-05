@@ -1,8 +1,11 @@
 @import "variables";
+@import "susyone";
 
 body{
 	background-color: $b-color;
 	margin:0;
+  // @include susy-grid-background; 
+	
 	
 	a{
 		text-decoration:none;
