@@ -8,6 +8,7 @@ class Item < ActiveRecord::Base
 	# Rules to create a valid Item
 	validates :nom, presence: true
 	validates :piece_id, presence: true
+	validates :type_id, presence: true
 
 	validates :nom, length: {		
 		minimum: 2, 
