@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :commentaires
+
   resources :sessions
   get 'login' => 'sessions#new', :as => 'login'
   get 'logout' => 'sessions#destroy', :as => 'logout' 
