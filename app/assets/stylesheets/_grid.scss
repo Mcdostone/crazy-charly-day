@@ -4,6 +4,7 @@ $total-columns: 12;
 $column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
+$container: 200px;
 
 /* Makes border-box properties */
 @include border-box-sizing;
