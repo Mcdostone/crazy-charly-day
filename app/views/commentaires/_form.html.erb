@@ -1,14 +1,13 @@
-<%= form_for Commentaire.new do |f| %>
+<%= form_for([@item, Commentaire.new]) do |f| %>
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-
   <div class="field">
     <%= f.label :contenu %><br>
-    <%= f.text_field :contenu %>
+    <%= f.text_area :contenu %>
   </div>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
