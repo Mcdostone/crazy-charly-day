@@ -21,5 +21,15 @@ class User < ActiveRecord::Base
 	def clean_password
 		self.password = nil
 	end
+
+
+	def self.authenticate(email, password)
+  		user = find_by_email email
+  		if (user && (user.password == BCrypt::Engine.hash_secret(password, user.salt)))
+    		user
+  		else
+    		nil
+  		end
+  	end
 	
 end
