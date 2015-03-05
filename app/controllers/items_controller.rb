@@ -88,7 +88,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  def best
+def best
     @items = Item.order('likes DESC').take 5
   end
 

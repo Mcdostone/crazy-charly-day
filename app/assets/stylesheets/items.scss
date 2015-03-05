@@ -29,7 +29,7 @@
 section{
 	
 	.thumbnail{
-		height:210px;
+		height:220px;
 		margin-right:20px;
 		a {
 			img{
@@ -40,6 +40,9 @@ section{
 		.tags{
 			position : relative;
 			bottom : 0;
+            span{
+              margin-right: 2px;
+            }
 			
 		}
   &:hover {@include box-shadow(rgba(125,125,125,0.7) 0.5px 0.5px 1px);}

@@ -12,8 +12,8 @@
     </a>
 </div>
 
-    <div class="collapse" id="collapseExample">
-        <div class="well col-md-4 ">
+    <div class="collapse">
+        <div class="well ">
             <%= label_tag :piece %><br/>
             <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece'
             %><br/>
@@ -33,4 +33,5 @@
 </section>
 <br>
 
-<button type="button" class="btn btn-default"><%= link_to 'New Item', new_item_path %></button>
+
+<%= button_to "New Item", new_item_path, :method => "get", :class => 'btn btn-default' %>
