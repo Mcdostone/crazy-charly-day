@@ -15,4 +15,10 @@
  *= require font-awesome
  */
 @import "compass";
-@import "susy";
+@import "susyone";
+
+.container{
+  @include container;
+  border : solid;
+}
+

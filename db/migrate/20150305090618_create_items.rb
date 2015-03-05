@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration
       t.float :prix
       t.string :photo
       t.text :description
+      t.string :couleur
 
       t.timestamps null: false
     end
