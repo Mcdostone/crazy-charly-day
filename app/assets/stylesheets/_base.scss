@@ -3,7 +3,8 @@
 body{
 	background-color: $b-color;
 	margin:0;
-	
+	font-family:'Comic Neue';
+
 	.container{
 	background-color: $light-color;
 }
@@ -26,8 +27,7 @@ body{
 			
 			&:hover{
 				background-color:none;
-				font-size:1.2em;
-			}	
+			}
 		}
 			.root{
 				background : url('assets/images/logo.png') center center;

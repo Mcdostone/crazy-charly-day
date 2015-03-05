@@ -1,26 +1,27 @@
 Rails.application.routes.draw do
-  
 
+  
   resources :sessions
+
+  get 'items/from_color' => 'items#from_color'
+  get 'items/from_type' => 'items#from_type'
+  get 'items/from_piece' => 'items#from_piece'
+
+
   get 'login' => 'sessions#new', :as => 'login'
   get 'logout' => 'sessions#destroy', :as => 'logout' 
 
-
   get "signup" => "users#new", :as => "sign_up"
+
   resources :users
-
-  
-
-
-  get 'items/couleur/:color' => 'items#filter_by_color'
-  get 'items/type/:id' => 'items#filter_by_type'
-  get 'items/piece/:id' => 'items#filter_by_piece'
 
   resources :types
   resources :pieces
+
   resources :items do
     resources :commentaires, :only => [:create]
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

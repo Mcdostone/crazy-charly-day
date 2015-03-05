@@ -1,10 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Items</h1>
 
+<!-- items_from_piece_path(:id => 4), :remote => true -->
+<div class="field row">
+    <h1>Listing Items</h1>
+    <a class="btn btn-default" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+       aria-controls="collapseExample">
+        <i class="fa fa-filter fa-lg"></i> Filter
+    </a>
 
-<section class="col-md-12">
-<%= render "listing" %>
+    <div class="collapse" id="collapseExample">
+        <div class="well col-md-4 ">
+            <%= label_tag :piece %><br/>
+            <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece'
+            %><br/>
+
+            <%= label_tag :type %><br/>
+            <%= select_tag :type, options_from_collection_for_select(@types, 'id', 'materiau'), :class => 'from_type' %>
+        </div>
+    </div>
+    <br/>
+</div>
+<div class="field">
+
+</div>
+
+<section id="items_grid" class="col-md-12">
+    <%= render partial: 'listing', locals: { items: @items } %>
 </section>
 <br>
 

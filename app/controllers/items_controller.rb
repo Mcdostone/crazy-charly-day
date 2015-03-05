@@ -6,6 +6,8 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    @pieces = Piece.all
+    @types = Type.all
   end
 
   # GET /items/1
@@ -65,21 +67,25 @@ class ItemsController < ApplicationController
   end
 
   # GET /items/couleur/rouge
-  def filter_by_color
+  def from_color
     @items = Item.where ['couleur = ?', params[:color]]
     render 'items/index'
   end
 
   # GET /items/type/id
-  def filter_by_type
-    @items = Item.where ['type_id = ?', params[:id]]
-    render 'items/index'
+  def from_type
+    @selected = Item.where ['type_id = ?', params[:id]]
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /items/piece/id
-  def filter_by_piece
-    @items = Item.where ['piece_id = ?', params[:id]]
-    render 'items/index'
+  def from_piece
+    @selected = Item.where ['piece_id = ?', params[:id]]
+    respond_to do |format|
+      format.js
+    end
   end
 
   def best
