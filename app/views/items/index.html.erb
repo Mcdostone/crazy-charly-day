@@ -18,7 +18,7 @@
       <tr>
         <td><%= item.nom %></td>
         <td><%= item.prix %></td>
-        <td><%= item.photo %></td>
+        <td><%= image_tag item.photo, :size => "100x100" %></td>
         <td><%= item.description %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
