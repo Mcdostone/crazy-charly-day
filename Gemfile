@@ -9,8 +9,8 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 # Use Compass as css sass library
 gem 'compass-rails', '~> 2.0.4'
-# Use susy as sass grid
-gem 'susy'
+# Use booststrap-sass for css framework
+gem 'bootstrap-sass', '~> 3.3.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

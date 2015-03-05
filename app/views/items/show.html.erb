@@ -30,5 +30,10 @@
   <%= Piece.find(@item.piece_id).nom %>
 </p>
 
+<p>
+  <strong>Type:</strong>
+  <%= Type.find(@item.type_id).materiau %>
+</p>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
