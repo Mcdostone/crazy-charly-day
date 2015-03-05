@@ -63,13 +63,19 @@ class ItemsController < ApplicationController
 
   # GET /items/couleur/rouge
   def filter_by_color
-    @items = Item.where(["couleur = ?", params[:color]])
+    @items = Item.where ['couleur = ?', params[:color]]
     render 'items/index'
   end
 
-  # GET /items/piece/cave
-  def filter_by_place
-    @items = Item.where(["piece_id = ?", params[:id]])
+  # GET /items/type/id
+  def filter_by_type
+    @items = Item.where ['id = ?', params[:id]]
+    render 'items/index'
+  end
+
+  # GET /items/piece/id
+  def filter_by_piece
+    @items = Item.where ['piece_id = ?', params[:id]]
     render 'items/index'
   end
 
