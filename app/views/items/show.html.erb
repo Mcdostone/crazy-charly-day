@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="row">
+<div class="row show_item" >
   <div class="col-md-8">
-      <%= image_tag @item.photo %>             
+     <div class="row banner_img">
+        <%= image_tag @item.photo , :class=>"img-responsive center-block " %>  
+      </div> 
+      <i class="fa-heart fa"></i> <%= @item.likes %>
+      <button class="btn btn-sm"><i class="fa fa-plus"></i> j'aime</button>          
   </div>
   <div class="col-md-4">
     <h2><%= @item.nom %></h2>
@@ -15,45 +19,7 @@
 
   </div>
 </div>
-<p>
-  <strong>Nom:</strong>
-  <%= @item.nom %>
-</p>
 
-<p>
-  <strong>Prix:</strong>
-  <%= @item.prix %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @item.photo %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Couleur:</strong>
-  <%= @item.couleur %>
-</p>
-
-<p>
-  <strong>Piece:</strong>
-  <%= @item.piece.nom %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @item.type.materiau %>
-</p>
-
-<p>
-  <strong>Likes:</strong>
-  <%= @item.likes %>
-</p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
