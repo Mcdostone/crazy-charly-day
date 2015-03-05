@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+
+<div class="row">
+  <div class="col-md-8">
+      <%= image_tag @item.photo %>             
+  </div>
+  <div class="col-md-4">
+    <h2><%= @item.nom %></h2>
+
+  </div>
+</div>
 <p>
   <strong>Nom:</strong>
   <%= @item.nom %>
