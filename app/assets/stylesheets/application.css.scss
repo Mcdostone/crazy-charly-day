@@ -15,22 +15,10 @@
  *= require font-awesome
  */
 @import "compass";
-@import "susy";
+@import "susyone";
 
 .container{
   @include container;
   border : solid;
 }
 
-.d1{
-  @include span(2);
-  background-color: #000000;
-}
-.d2{
-  @include span(2);
-  background-color: #B00100;
-}
-.d3{
-  @include span(1);
-  background-color: #2E2F30;
-}
