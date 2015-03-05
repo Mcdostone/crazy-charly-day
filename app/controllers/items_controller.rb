@@ -61,6 +61,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  # GET /items/couleur/rouge
+  def filter_by_color
+    @items = Item.where(["couleur = ?", params[:color]])
+    render 'items/index'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
@@ -69,6 +75,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:nom, :prix, :photo, :description)
+      params.require(:item).permit(:nom, :prix, :photo, :description, :couleur)
     end
 end
