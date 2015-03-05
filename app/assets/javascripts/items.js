@@ -1,12 +1,11 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     //Tell Rails that we’re sending a JavaScript request
-    /*$.ajaxSetup({ 
+    /*$.ajaxSetup({
         'beforeSend': function (xhr){
         xhr.setRequestHeader("Accept", "text/javascript")}  
     });*/
     $(".from_piece").change(function() {
         var type = $('.from_type option:selected').val();
-        alert(type);
         var data = {
             piece_id: $(this).val()
         };
@@ -21,7 +20,7 @@ jQuery(document).ready(function($) {
             success : function(result) {
                 eval(result);
             },
-            error : function(xhr, ajaxOptions, thrownError) {
+            error: function (xhr, ajaxOptions, thrownError) {
                 alert(thrownError);
             }
         });
@@ -29,7 +28,6 @@ jQuery(document).ready(function($) {
 
     $('.from_type').change(function() {
         var piece = $('.from_piece option:selected').val();
-        alert(piece);
         var data = {
             type_id: $(this).val()
         };
@@ -44,9 +42,10 @@ jQuery(document).ready(function($) {
             success : function(result) {
                 eval(result);
             },
-            error : function(xhr, ajaxOptions, thrownError) {
+            error: function (xhr, ajaxOptions, thrownError) {
                 alert(thrownError);
             }
         });
     });
 });
+

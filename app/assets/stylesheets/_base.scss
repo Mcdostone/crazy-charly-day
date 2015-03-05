@@ -1,53 +1,58 @@
 @import "variables";
 
-body{
-	background-color: $b-color;
-	margin:0;
-	font-family:'Comic Neue';
+body {
+  background-color: $b-color;
+  margin: 0;
+  font-family: 'Comic Neue';
 
-	.container{
-	background-color: $light-color;
-}
+  .container {
+    background-color: $light-color;
+  }
 
+  footer {
+    p {
+      text-align: center;
+    }
+  }
 
-	footer{
-	  	p{
-	   	 text-align: center;
-	  	}
-	}
+  nav {
+    background-color: $dark-color;
+    color: $light-color;
+    border-radius: 0px;
 
+    a {
+      text-decoration: none;
+      color: $light-color;
 
+      &:hover {
+        background-color: none;
+      }
+    }
+    .root {
+      background: url('assets/images/logo.png') center center;
+      background-size: 100% 100%;
+      height: 100%;
+      width: 200px;
+    }
 
-	nav {
-		background-color: $dark-color;
-		color : $light-color;
-		border-radius:0px;
-		
-
-		a{
-			text-decoration:none;
-			color : $light-color;
-			
-			&:hover{
-				background-color:none;
-			}
-		}
-			.root{
-				background : url('assets/images/logo.png') center center;
-				background-size:100% 100%;
-				height:100%;
-				width : 200px;	
-			}
-
-
-			ul{
-				display: inline-block;
-				li{
-					display: inline-block;
-					margin-left:10px;
-				}
-			}
-	}
+    ul {
+      display: inline-block;
+      li {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+    .sign-user{
+      ul{
+        display: none;
+        list-style: none;
+        color: white;
+        background-color: grey;
+        width: 8em;
+        position: absolute;
+      }
+    }
+  }
 }
 
 	
