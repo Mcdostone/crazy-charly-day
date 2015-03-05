@@ -1,0 +1,18 @@
+@import "variables";
+
+body{
+	background-color: $b-color;
+	margin:0;
+	
+	nav {
+		background-color: $dark-color;
+		color : $light-color;
+		ul{
+			display: inline-block;
+			li{
+				display: inline-block;
+			}
+		}
+	}
+}
+
