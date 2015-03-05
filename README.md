@@ -1,5 +1,7 @@
 # Evénement Crazy Charly Day !
 
+### Lemon Team
+
 [Visit our website!](https://hidden-river-8024.herokuapp.com)
 [repo](https://github.com/Mcdostone/crazy-charly-day)
 
