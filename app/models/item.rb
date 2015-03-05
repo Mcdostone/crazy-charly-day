@@ -1,4 +1,7 @@
 class Item < ActiveRecord::Base
+	belongs_to :piece
+	belongs_to :type
+	
 	# To upload images
 	mount_uploader :photo, PhotoUploader
 
