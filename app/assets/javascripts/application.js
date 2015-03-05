@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var ajx = (function () {
+    return {
+        modules: {}
+    }
+})();
+
+ajx.modules.items = (function () {
+    return {
+        init: function () {
+            false;
+        },
+        ajax: function () {
+            return false;
+        }
+    }
+})();
+
