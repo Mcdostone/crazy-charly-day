@@ -2,9 +2,18 @@
 
 <h1>Listing Items</h1>
 
+<!-- items_from_piece_path(:id => 4), :remote => true -->
+  <div class="field">
+    <%= label_tag :piece %><br />
+    <%= select_tag :piece, options_from_collection_for_select(@pieces, 'id', 'nom'), :class => 'from_piece' %>
+  </div>
+    <div class="field">
+    <%= label_tag :type %><br />
+    <%= select_tag :type, options_from_collection_for_select(@types, 'id', 'materiau'), :class => 'from_type' %>
+</div>
 
-<section class="col-md-12">
-<%= render "listing" %>
+<section id="items_grid" class="col-md-12">
+<%= render partial: 'listing', locals: { items: @items } %>
 </section>
 <br>
 
