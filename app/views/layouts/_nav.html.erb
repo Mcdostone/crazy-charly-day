@@ -15,7 +15,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="menu_item"><a href=""><i class="fa fa-home fa-lg"></i> Home</a></li>
+        <li class="menu_item"><a href="<%= url_for(controller: 'application', action: 'home', only_path: true) %>"><i class="fa fa-home fa-lg"></i> Home</a></li>
         <li class="menu_item"><a href="<%= url_for(controller: 'items', action: 'index', only_path: true) %>"><i class="fa fa-bars fa-lg"></i> Items</a></li>
         <li class="menu_item"><a href="#"><i class="fa fa-envelope-o fa-lg"></i> Contact</a></li>
       </ul>
