@@ -34,11 +34,11 @@
   </div>
   <div class="field">
     <%= f.label :piece_id %><br />
-    <%= f.select :piece_id, options_for_select(Piece.all.map{|p|[p.nom, p.id]}) %>
+    <%= f.select :piece_id, options_from_collection_for_select(@pieces, 'id', 'nom') %>
   </div>
     <div class="field">
     <%= f.label :type_id %><br />
-    <%= f.select :type_id, options_for_select(Type.all.map{|t|[t.materiau, t.id]}) %>
+    <%= f.select :type_id, options_from_collection_for_select(@types, 'id', 'materiau') %>
 </div>
   <div class="actions">
     <%= f.submit %>

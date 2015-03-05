@@ -25,8 +25,8 @@
         <td><%= image_tag item.photo, :size => "100x100" %></td>
         <td><%= item.description %></td>
         <td><%= item.couleur %></td>
-        <td><%= Piece.find(item.piece_id).nom %></td>
-        <td><%= Type.find(item.type_id).materiau %></td>
+        <td><%= item.piece.nom %></td>
+        <td><%= item.type.materiau %></td>
         <td><%= item.likes %></td>
         <td><%= link_to 'Show', item %></td>
         <td><i class="fa fa-trash fa-lg"></i> <%= link_to 'Edit', edit_item_path(item) %></td>
