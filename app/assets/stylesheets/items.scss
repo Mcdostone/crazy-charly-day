@@ -46,7 +46,14 @@ section{
 	}
 }
 
-.carousel{
-	height: 400px;
-}
 
+.show_item{
+	.banner_img{
+		text-align:center;
+	}
+	
+
+	.prix{
+		font-size : 1.5em;
+	}
+}
