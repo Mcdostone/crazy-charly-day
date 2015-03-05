@@ -1,6 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-
 <div class="row show_item" >
   <div class="col-md-8">
      <div class="row banner_img">
@@ -17,22 +15,20 @@
     <span class="label label-default"><%= @item.type.materiau %></span>
     <blockquote><%= @item.description %></blockquote>
     <span class="prix"><%= @item.prix %> <i class="fa fa-eur"></i></span>
-
   </div>
 </div>
 
-
- <% @item.commentaires.each do |comm| %>
+<div class="row">
+<div class="col-md-12">
+  <h2>  Comments</h2>
+  
+ <% @item.commentaires.each do |comm| %> 
+ <blockquote>
  <p>
-  <strong>Email:</strong>
-  <%= comm.email %>
-</p>
- <p>
-  <strong>Contenu:</strong>
-  <%= comm.contenu %>
-</p>
-
-
+  <b><%= comm.contenu %></b> 
+  </p>
+  <footer>Comment from <cite title="Source Title"><%= comm.email %></cite></footer>
+</blockquote> 
   <% end %>
 
 
@@ -40,3 +36,5 @@
 <%= link_to 'Back', items_path %>
 
 <%= render "commentaires/form" %>
+</div>
+</div>
