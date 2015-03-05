@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20150305150531) do
     t.float    "prix"
     t.string   "photo"
     t.text     "description"
+    t.string   "couleur"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.string   "couleur"
     t.integer  "piece_id"
     t.integer  "type_id"
     t.integer  "likes",       default: 0
