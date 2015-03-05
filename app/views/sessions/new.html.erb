@@ -9,9 +9,10 @@
 
     <div class="form-group">
         <%= label_tag :password  %><br/>
-        <%= password_field_tag :password, :class => 'test' %>
+        <%= password_field_tag :password %>
     </div>
 
-    <div class="btn btn-lg btn-primary"><%= submit_tag "Log in" %></div>
+    <%= button_to "Log in", '/items', :method => "get", :class => 'btn btn-default' %>
+
     <% end %>
 </section>
