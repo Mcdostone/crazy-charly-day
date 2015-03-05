@@ -16,3 +16,17 @@
  */
 @import "compass";
 @import "susy";
+
+.container{
+  @include container;
+  border : solid;
+}
+
+.d1{
+ // @include span(1,3);
+  background-color: #000000;
+}
+.d2{
+  @include span-columns(3,12);
+  background-color: #B00100;
+}
