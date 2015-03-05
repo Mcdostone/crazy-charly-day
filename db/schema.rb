@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305145157) do
+ActiveRecord::Schema.define(version: 20150305150531) do
 
   create_table "items", force: :cascade do |t|
     t.string   "nom"
     t.float    "prix"
     t.string   "photo"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "couleur"
     t.integer  "piece_id"
     t.integer  "type_id"
-    t.integer  "likes"
+    t.integer  "likes",       default: 0
   end
 
   add_index "items", ["piece_id"], name: "index_items_on_piece_id"
