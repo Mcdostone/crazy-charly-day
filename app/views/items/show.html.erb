@@ -19,14 +19,14 @@
 
 <div class="row">
 <div class="col-md-12">
-  <h2>  Commentaires</h2>
+  <h2>  Comments</h2>
   
  <% @item.commentaires.each do |comm| %> 
  <blockquote>
  <p>
   <b><%= comm.contenu %></b> 
   </p>
-  <footer>Commentaire de <cite title="Source Title"><%= comm.email %></cite></footer>
+  <footer>Comment from <cite title="Source Title"><%= comm.email %></cite></footer>
 </blockquote> 
   <% end %>
 
