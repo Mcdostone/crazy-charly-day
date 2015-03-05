@@ -2,32 +2,41 @@
 
 <h1>Listing Items</h1>
 
-<table>
-  <thead>
+<table class="list-item">
+    <thead>
     <tr>
-      <th>Nom</th>
-      <th>Prix</th>
-      <th>Photo</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Photo</th>
+        <th>Description</th>
+        <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.nom %></td>
-        <td><%= item.prix %></td>
-        <td><%= image_tag item.photo, :size => "100x100" %></td>
-        <td><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div>
+        <tr>
+            <td><%= item.nom %></td>
+            <td><%= item.prix %></td>
+            <td><%= image_tag item.photo, :size => "100x100" %></td>
+            <td><%= item.description %></td>
+            <td>
+                <button><%= link_to 'Show', item %></button>
+            </td>
+            <td>
+                <button><i class="fa fa-trash fa-lg"></i> <%= link_to 'Edit', edit_item_path(item) %></button>
+            </td>
+            <td>
+                <button><i class="fa fa-edit fa-lg"></i> <%= link_to 'Destroy', item, method: :delete, data: { confirm:
+                    'Are you sure?' } %>
+                </button>
+            </td>
+        </tr>
+    </div>
     <% end %>
-  </tbody>
+    </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Item', new_item_path %>
+<button><%= link_to 'New Item', new_item_path %></button>
