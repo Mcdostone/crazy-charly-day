@@ -17,18 +17,18 @@
   </div>
 </div>
 
-
- <% @item.commentaires.each do |comm| %>
- <p>
-  <strong>Email:</strong>
-  <%= comm.email %>
-</p>
+<div class="row">
+<div class="col-md-12">
+  <h2>  Commentaires</h2>
+  
+ <% @item.commentaires.each do |comm| %> 
+ <blockquote>
  <p>
   <strong>Contenu:</strong>
   <%= comm.contenu %>
-</p>
-
-
+  </p>
+  <footer>Commentaire de <cite title="Source Title"><%= comm.email %></cite></footer>
+</blockquote> 
   <% end %>
 
 
@@ -36,3 +36,5 @@
 <%= link_to 'Back', items_path %>
 
 <%= render "commentaires/form" %>
+</div>
+</div>
