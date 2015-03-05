@@ -7,6 +7,6 @@ class CreateCommentaires < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    #add_foreign_key :commentaires, :items
+    add_foreign_key :commentaires, :items
   end
 end

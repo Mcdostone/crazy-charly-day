@@ -21,6 +21,9 @@ body{
 	nav {
 		background-color: $dark-color;
 		color : $light-color;
+		border-radius:0px;
+		
+
 		a{
 			text-decoration:none;
 			color : $light-color;

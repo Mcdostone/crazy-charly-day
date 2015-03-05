@@ -21,5 +21,21 @@
 </div>
 
 
+ <% @item.commentaires.each do |comm| %>
+ <p>
+  <strong>Email:</strong>
+  <%= comm.email %>
+</p>
+ <p>
+  <strong>Contenu:</strong>
+  <%= comm.contenu %>
+</p>
+
+
+  <% end %>
+
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
+
+<%= render "commentaires/form" %>
